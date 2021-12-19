@@ -17,7 +17,7 @@ const EventItem: React.FC<EventItemProps> = ({ data }) => {
     <>
       {/* {data.type === 'appointment' ? ( */}
       <div
-        className={`p-4 bg-orange-light mb-2 rounded-md border-l-4 border-${data.data.labelColor} mt-1 cursor-pointer`}
+        className={`p-4 bg-orange-light mb-2 rounded-md border-l-4 ${data.data.labelColor.border} mt-1 cursor-pointer`}
         onClick={openModal}
       >
         <div className="flex justify-between items-start">

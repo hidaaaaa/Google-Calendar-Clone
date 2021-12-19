@@ -21,12 +21,12 @@ const schema = yup.object().shape({
 });
 
 const labelsClasses = [
-  'indigo-500',
-  'gray-500',
-  'green-500',
-  'blue-500',
-  'red-500',
-  'purple-500',
+  { bg: 'bg-indigo-500', border: 'border-indigo-500' },
+  { bg: 'bg-gray-500', border: 'border-gray-500' },
+  { bg: 'bg-green-500', border: 'border-green-500' },
+  { bg: 'bg-blue-500', border: 'border-blue-500' },
+  { bg: 'bg-red-500', border: 'border-red-500' },
+  { bg: 'bg-purple-500', border: 'border-purple-500' },
 ];
 
 const AppointmentForm: React.FC<AppointmentFormProps> = ({ handleSubmit }) => {
@@ -34,7 +34,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({ handleSubmit }) => {
   const daySelected = useSelector(
     (state: RootStateOrAny) => state.day.daySelected
   );
-  const [selectedLabel, setSelectedLabel] = useState('indigo-500');
+  const [selectedLabel, setSelectedLabel] = useState(labelsClasses[0]);
   const [openFromCalendar, setOpenFromCalendar] = useState(false);
   const [fromTime, setFromTime] = useState(
     dayjs().set('hour', 8).set('minute', 0).set('second', 0)
@@ -184,13 +184,13 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({ handleSubmit }) => {
 
           <BookmarkIcon className="max-h-6 text-gray-400" />
           <div className="flex gap-x-2">
-            {labelsClasses.map((labelClass, index) => (
+            {labelsClasses.map((labelClass: any, index) => (
               <span
                 key={index}
-                className={`bg-${labelClass}   w-6 rounded-full flex items-center justify-center cursor-pointer h-6`}
+                className={`${labelClass.bg}  w-6 rounded-full flex items-center justify-center cursor-pointer h-6`}
                 onClick={() => setSelectedLabel(labelClass)}
               >
-                {labelClass === selectedLabel && (
+                {labelClass.bg === selectedLabel.bg && (
                   <CheckIcon className="max-h-6 text-white" />
                 )}
               </span>

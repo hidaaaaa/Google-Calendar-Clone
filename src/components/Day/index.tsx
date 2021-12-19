@@ -82,7 +82,7 @@ const Day: React.FC<DayProps> = ({ day, rowIndex }) => {
                 <>
                   <div
                     key={index}
-                    className={`w-full text-xs p-1 bg-orange-light rounded mb-0.5 text-blue-dark font-semibold truncate border-l-4 border-${item.data.labelColor} cursor-pointer hover:underline`}
+                    className={`w-full text-xs p-1 bg-orange-light rounded mb-0.5 text-blue-dark font-semibold truncate border-l-4 ${item.data.labelColor.border} cursor-pointer hover:underline`}
                     onClick={(e) => {
                       e.stopPropagation();
                       openModal();
