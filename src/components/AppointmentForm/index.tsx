@@ -187,7 +187,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({ handleSubmit }) => {
             {labelsClasses.map((labelClass, index) => (
               <span
                 key={index}
-                className={`bg-${labelClass}  w-6 rounded-full flex items-center justify-center cursor-pointer h-6`}
+                className={`bg-${labelClass}   w-6 rounded-full flex items-center justify-center cursor-pointer h-6`}
                 onClick={() => setSelectedLabel(labelClass)}
               >
                 {labelClass === selectedLabel && (

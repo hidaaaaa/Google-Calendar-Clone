@@ -1,0 +1,44 @@
+{
+     "20-December-2021" : [
+          {
+               id: 0,
+               type: "appointment",
+               data: {
+                    date: "2021-12-19T17:00:00.000Z",
+                    title: "Title"
+                    description: "Description",
+                    labelColor: "indigo-500"
+                    time: {
+                         from: {
+                              hour: 8, 
+                              minute: 0
+                         }, 
+                         to: {
+                              hour: 9, minute: 0
+                         }
+                    },
+               }
+          }
+     ],
+     "21-December-2021" : [
+          {
+               id: 0,
+               type: "appointment",
+               data: {
+                    date: "2021-12-20T17:00:00.000Z",
+                    title: "Title"
+                    description: "Description",
+                    labelColor: "indigo-500"
+                    time: {
+                         from: {
+                              hour: 8, 
+                              minute: 0
+                         }, 
+                         to: {
+                              hour: 9, minute: 0
+                         }
+                    },
+               }
+          }
+     ]
+}
