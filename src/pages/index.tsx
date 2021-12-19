@@ -50,10 +50,10 @@ const Home: NextPage = () => {
         {isModalVisible && <Modal />}
 
         <div className=" flex flex-col">
-          <div className="flex flex-1 px-4 md:px-5 lg:px-20">
+          <div className="flex flex-1 px-4 md:px-5 lg:px-20 max-w-screen-xl mx-auto">
             {!!width && width > 768 ? (
               <>
-                <div className={`p-2 w-full  md:w-80 `}>
+                <div className={`p-2 w-full  md:w-80 2xl:w-96`}>
                   <Navbar month={currentMonth} />
                 </div>
               </>
