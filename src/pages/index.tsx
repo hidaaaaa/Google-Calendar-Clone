@@ -41,7 +41,7 @@ const Home: NextPage = () => {
   return (
     <div className="bg-tile-base min-h-screen">
       <Head>
-        <title>Save code nextjs</title>
+        <title>Master Branch Interview</title>
         <meta name="description" content="Save code nextjs" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
